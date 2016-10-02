@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
  * java8의 mapping 관련 학습
  */
 @Slf4j
-public class Mapping {
+public class Map {
 
     @Test
     public void countLine() throws Exception {
