@@ -1,8 +1,7 @@
 package application;
 
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.stream.IntStream;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,9 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 public class FizzBuzz {
 
     public String convert(int number) {
-        String converted = Stream.iterate(1, x -> x + 1).
-                limit(number).
-                map(x -> {
+//        Stream.iterate(1, x -> x + 1).limit(number) 으로 대체 가능
+        String converted = IntStream.range(1, number + 1).
+                mapToObj(x -> {
                     String str = "";
                     if (x % 3 == 0) str += "fizz";
                     if (x % 5 == 0) str += "buzz";
