@@ -14,7 +14,7 @@ public class FizzBuzz {
 
     public String convert(int number) {
 //        Stream.iterate(1, x -> x + 1).limit(number) 으로 대체 가능
-        String converted = IntStream.range(1, number + 1).
+        String converted = IntStream.rangeClosed(1, number).
                 mapToObj(x -> {
                     String str = "";
                     if (x % 3 == 0) str += "fizz";
